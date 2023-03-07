@@ -106,15 +106,16 @@ public class Barista
 				//-----------------------------------------------------------------
 				
 				if (roundedTips > cashTotal)
-				{
-					System.out.println("\nYou can not round up this week.");
-					System.out.println ("Total tips issued: $" + withBigDecimal(tipPot, 2) + "\n");		
-				}
-				else
-				{
-					System.out.println("\nYou CAN round up this week.");
-					System.out.println("Total tips issued if rounded up: $" + withBigDecimal(roundedTips, 2) + " leaving $" + (cashTotal - roundedTips) + " to spare. \n");	
-				}
+                {
+                    System.out.println("\nYou can not round up fairly this week.");
+                    System.out.println ("Total tips issued: $" + withBigDecimal(tipPot, 2));
+                    System.out.println("There will be $" + (roundedTips - cashTotal) + " left over.\n");
+                }
+                else
+                {
+                    System.out.println("\nYou CAN round up this week.");
+                    System.out.println("Total tips issued if rounded up: $" + withBigDecimal(roundedTips, 2) + " leaving $" + (cashTotal - roundedTips) + " to spare. \n");
+                }
 			}
 			catch (InputMismatchException ex)
 			{
