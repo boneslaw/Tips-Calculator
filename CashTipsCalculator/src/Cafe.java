@@ -61,6 +61,7 @@ public class Cafe
 				case 2: 
 					choice = 2;
 					personnel.payday();
+					success = true;
 					break;
 
 				default:
